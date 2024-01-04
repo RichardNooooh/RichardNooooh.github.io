@@ -3,25 +3,33 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Richard Noh</title>
+    <title>Richard Noh | Portfolio</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="icon" href="assets/logo.svg">
+    <script src="./scripts/base.js" defer></script>
 </head>
 
 <body>
     <header>
         <section class="logo">
-            RN <!-- TODO want to make this a small SVG thing... -->
+            <img src="assets/logo.svg" alt="logo">
         </section>
         <section class="links">
-            <ul><!-- TODO want to make these small SVG icons -->
+            <ul>
                 <li class="github">
-                    <a href="https://github.com/RichardNooooh">GitHub</a>
+                    <a href="https://github.com/RichardNooooh">
+                        <img src="assets/github-mark-white.svg" alt="github" width="40px">
+                    </a>
                 </li>
                 <li class="linkedin">
-                    <a href="https://www.linkedin.com/in/rnoh/">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/rnoh/">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="linkedin" width="40px">
+                    </a>
                 </li>
                 <li class="lab">
-                    <a href="https://sites.utexas.edu/berkin/">Research Lab</a>
+                    <a href="https://sites.utexas.edu/berkin/">
+                        <img src="https://sites.utexas.edu/berkin/wp-content/themes/ut-theme/images/favicon.ico" alt="researchlab" width="40px">
+                    </a>
                 </li>
             </ul>
         </section>
@@ -30,13 +38,13 @@
     <main>
         <nav class="menu">
             <ul>
-                <li class="blog">
+                <li class="blog" id="blog-button">
                     blog
                 </li>
-                <li class="projects">
+                <li class="projects" id="projects-button">
                     projects
                 </li>
-                <li class="contact">
+                <li class="contact" id="contact-button">
                     contact
                 </li>
             </ul>
@@ -52,10 +60,10 @@
                         Computer Science and Physics to create interesting visuals and simulations.</p>
                 </div>
                 <div class="current-project-banner">
-                    <a href="#"> <!-- TODO make a small box that says "updated DATE" -->
-                        <h2>
+                    <a href="#" id="project-link"> <!-- TODO make a small box that says "updated DATE" -->
+                        <h3>
                             Current Project:
-                        </h2>
+                        </h3>
                     </a>
                     <p>Academic research on modeling surface tension with CPDI-MPM with Dr. Berkin Dortdivanlioglu (Since Nov 2022)</p>
                 </div>

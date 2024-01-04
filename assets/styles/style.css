@@ -1,21 +1,22 @@
 body {
-    background: #393840;
+    background: #27262c;
     color: #f6f6f6;
     font-family: Helvetica Neue, 
                     Helvetica, 
                     Arial, 
                     sans-serif;
     font-size: 200%;
-    margin: 20px;
+    margin: 20px 20%;
     padding: 0;
 }
 
 header {
     background: #333;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 a:link, a:visited {
@@ -27,6 +28,10 @@ a:hover, a:active {
     text-decoration: none;
     color: red;
 }
+
+/* .body-container {
+
+} */
 
 .links ul {
     display: flex;
@@ -54,13 +59,34 @@ main {
     list-style: none;
 }
 
+.blog:hover {
+    text-decoration: line-through;
+}
+
+.projects:hover, .contact:hover {
+    color:aqua;
+}
+
 .menu-separator {
-    height: 200px;
+    height: 300px;
     width: 1px;
     background: #fff;
 }
 
 .content-container {
     padding-left: 10%
+}
+
+.current-project-banner {
+    background-color: dimgrey;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:5px;
+}
+
+.current-project-banner p {
+    margin-left: 10px;
 }
 
