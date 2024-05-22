@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <section class="logo">
+        <section id="logo">
             <img src="assets/logo.svg" alt="logo">
         </section>
         <section class="links">
@@ -39,13 +39,13 @@
         <nav class="menu">
             <ul>
                 <li class="blog" id="blog-button">
-                    blog (WIP)
+                    blog
                 </li>
                 <li class="projects" id="projects-button">
-                    projects (WIP)
+                    projects
                 </li>
                 <li class="contact" id="contact-button">
-                    contact (WIP)
+                    <a href="mailto::richard.jun.noh@gmail.com">contact</a> <!--TODO check this...-->
                 </li>
             </ul>
         </nav>
@@ -53,26 +53,27 @@
         <div class="menu-separator"></div>
 
         <section class="content-container">
-            <div class="welcome-message">
+            <div id="home-content" class="content" style="display: block;">
                 <div class="message">
                     <h1>Hey</h1>
                     <p>I am a senior at the University of Texas at Austin. My passions are in interweaving 
                         Computer Science and Physics to create interesting visuals and simulations.</p>
                 </div>
-                <div class="current-project-banner">
-                    <a href="#" id="project-link"> <!-- TODO make a small box that says "updated DATE" -->
+                <!-- <div class="current-project-banner">
+                    <a href="#" id="project-link">
                         <h3>
                             Current Project:
                         </h3>
                     </a>
                     <p>Academic research on modeling surface tension with CPDI-MPM with Dr. Berkin Dortdivanlioglu (Since Nov 2022)</p>
-                </div>
+                </div> -->
             </div>
-            <div class="projects-overview">
-                
+            <div id="projects-content" class="content" style="display: none;">
+                <h1>Projects</h1>
+                <div id="projects-list"></div>
             </div>
-            <div class="contact-info">
-
+            <div id="contact-content" class="content" style="display: none;">
+                contact
             </div>
         </section>
     </main>

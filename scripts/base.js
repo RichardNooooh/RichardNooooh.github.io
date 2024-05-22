@@ -1,19 +1,17 @@
+// menu interaction
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = {
+        'home-content': document.getElementById('home-content'),
+        'projects-content': document.getElementById('projects-content'),
+    };
 
-function switchProject() {
-    alert('project selected');
-}
+    document.getElementById('logo').addEventListener('click', () => showContent('home-content'));
+    document.getElementById('projects-button').addEventListener('click', () => showContent('projects-content'));
 
-function switchContact() {
-    alert('contact selected')
-}
+    function showContent(sectionId) {
+        Object.values(sections).forEach(section => section.style.display = 'none');
+        sections[sectionId].style.display = 'block';
+    }
 
-function addMenuListeners()
-{
-    let projectsButton = document.getElementById('projects-button');
-    projectsButton.addEventListener('mousedown', switchProject);
-    
-    let contactButton = document.getElementById('contact-button');
-    contactButton.addEventListener('mousedown', switchContact);
-}
-
-addMenuListeners()
+    showContent('home-content');
+});
