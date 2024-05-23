@@ -4,9 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Richard Noh | WIP Portfolio</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="icon" href="assets/logo.svg">
-    <script src="./scripts/base.js" defer></script>
 </head>
 
 <body>
@@ -71,12 +70,21 @@
             <div id="projects-content" class="content" style="display: none;">
                 <h1>Projects</h1>
                 <div id="projects-list"></div>
+                <div class="page-nav">
+                    <button id="prev-button" disabled>Prev</button>
+                    <button id="next-button">Next</button>
+                </div>
             </div>
             <div id="contact-content" class="content" style="display: none;">
                 contact
             </div>
         </section>
     </main>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/projects.js"></script>
+    <script src="scripts/base.js"></script>
 
 </body>
 

@@ -6,15 +6,14 @@ body {
     padding: 0;
 }
 
-/* Add a max-width and center the header */
 header {
     background: #333;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Set your preferred maximum width */
-    margin: 0 auto; /* Center the header */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header .logo button {
@@ -49,12 +48,11 @@ header .logo button:hover {
     transform: scale(1.1);
 }
 
-/* Add a max-width and center the main content */
 main {
     display: flex;
     padding: 20px;
-    max-width: 1200px; /* Set your preferred maximum width */
-    margin: 0 auto; /* Center the main content */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .menu ul {
@@ -103,7 +101,7 @@ main {
     display: block;
 }
 
-
+ /* Projects Menu */
 .project-item {
     border: 1px solid #444;
     padding: 10px;
@@ -144,3 +142,16 @@ main {
     margin-right: 5px;
 }
 
+.pagination button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}

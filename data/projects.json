@@ -1,0 +1,82 @@
+[
+    {
+      "title": "Project 1",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 1. It is very interesting and useful.",
+      "link": "",
+      "gallery": [
+        "assets/project_images/cat.jpg",
+        "assets/project_images/cat.jpg"
+      ]
+    },
+    {
+      "title": "Project 2",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 3",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 4",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 5",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 6",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 7",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 8",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 9",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 10",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    },
+    {
+      "title": "Project 11",
+      "thumbnail": "assets/project_images/cat.jpg",
+      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
+      "link": "http://example.com/project2",
+      "gallery": []
+    }
+  ]
