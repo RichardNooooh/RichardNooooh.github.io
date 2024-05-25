@@ -1,82 +1,26 @@
 [
     {
-      "title": "Project 1",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 1. It is very interesting and useful.",
-      "link": "",
-      "gallery": [
-        "assets/project_images/cat.jpg",
-        "assets/project_images/cat.jpg"
-      ]
+        "title": "Surface Tension Simulation Research",
+        "thumbnail": "assets/project_images/surface_research/surf_thumbnail.png",
+        "description": "(In-Progress) Academic research on surface tension simulations with Dr. Berkin Dortdivanlioglu at UT Austin. Built custom simulation software in Julia, with geometry preprocessing with GMSH and visualization postprocessing in Paraview. This work was done as part of my paid research position in the lab.",
+        "link": "",
+        "gallery": ["assets/project_images/surface_research/LiquidBridge.gif",
+                    "assets/project_images/surface_research/sphereDropletSquish_30-1.gif",
+                    "assets/project_images/surface_research/spherical_shell_bilayer_droplets_l0_1_r10.gif"]
     },
     {
-      "title": "Project 2",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
+        "title": "Tetris AI",
+        "thumbnail": "assets/project_images/tetris_ai/gui.png",
+        "description": "(In-Progress) Reinforcement learning agents in a custom Tetris environment implemented in Python. One of the agents include a Deep Q-Learning agent implemented with PyTorch.",
+        "link": "https://github.com/RichardNooooh/TetrisRL",
+        "gallery": []
     },
     {
-      "title": "Project 3",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
-    },
-    {
-      "title": "Project 4",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
-    },
-    {
-      "title": "Project 5",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
-    },
-    {
-      "title": "Project 6",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
-    },
-    {
-      "title": "Project 7",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
-    },
-    {
-      "title": "Project 8",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
-    },
-    {
-      "title": "Project 9",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
-    },
-    {
-      "title": "Project 10",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
-    },
-    {
-      "title": "Project 11",
-      "thumbnail": "assets/project_images/cat.jpg",
-      "description": "This is a brief description of Project 2. It has some fascinating aspects.",
-      "link": "http://example.com/project2",
-      "gallery": []
+        "title": "Quantum UNO Game",
+        "thumbnail": "assets/project_images/quno/quno.png",
+        "description": "A Python console game of \"Quantum Computing\" UNO, which simulates quantum-like effects with Qiskit's Aer simulator. Each card is represented by a 6 qubit state, which interact with the deck and the effects of different cards to model quantum effects like superposition and entanglement, utilizing Grover's quantum computing algorithm for some of the internal logic.",
+        "link": "https://github.com/RichardNooooh/QuantumUNO",
+        "gallery": ["assets/project_images/quno/toffoli.png",
+                    "assets/project_images/quno/play_screen.png"]
     }
-  ]
+]

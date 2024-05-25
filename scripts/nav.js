@@ -1,17 +1,37 @@
 function setupMenu()
 {
-    const sections = {
-        'home-content': document.getElementById('home-content'),
-        'projects-content': document.getElementById('projects-content'),
+    const pages = {
+        'main': 
+        {
+            'button': document.getElementById('main-button'), 
+            'page': document.getElementById('main-content')
+        },
+        'projects': 
+        {
+            'button': document.getElementById('projects-button'), 
+            'page': document.getElementById('projects-content')
+        },
+        'blog': 
+        {
+            'button': document.getElementById('blog-button'), 
+            'page': document.getElementById('blog-content')
+        },
     };
 
-    document.getElementById('logo').addEventListener('click', () => showContent('home-content'));
-    document.getElementById('projects-button').addEventListener('click', () => showContent('projects-content'));
+    function setActivePage(activePage) {
+        Object.keys(pages).forEach((pageKey) => {
+            pages[pageKey]['button'].classList.remove(['active'])
+            pages[pageKey]['page'].style.display = 'none';
+        });
 
-    function showContent(sectionId) {
-        Object.values(sections).forEach(section => section.style.display = 'none');
-        sections[sectionId].style.display = 'block';
+        pages[activePage]['button'].classList.add(['active'])
+        pages[activePage]['page'].style.display = 'block';
     }
 
-    showContent('home-content');
+    document.getElementById('logo').addEventListener('click', () => setActivePage('main'));
+    Object.keys(pages).forEach((pageKey) => {
+        pages[pageKey]['button'].addEventListener('click', () => setActivePage(pageKey));
+    });
+
+    setActivePage('main');
 }

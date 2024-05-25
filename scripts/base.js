@@ -2,6 +2,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     setupMenu();
     projectsFactory = new ProjectsList("projects-list")
-    // initProjects();
-    // initProjectNavButtons();
+    // do I need a projectslist object like this...? hmm
 });

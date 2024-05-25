@@ -61,6 +61,7 @@ class ProjectsList
             const img = document.createElement('img');
             img.src = image;
             gallery.appendChild(img);
+            gallery.style.display = 'none';
         });
     
         projectItem.appendChild(thumbnail);
@@ -82,9 +83,11 @@ class ProjectsList
             if (projectItem.classList.contains('expanded')) {
                 previewDescription.style.display = 'none';
                 fullDescription.style.display = 'block';
+                gallery.style.display = 'block';
             } else {
                 previewDescription.style.display = 'block';
                 fullDescription.style.display = 'none';
+                gallery.style.display = 'none';
             }
         });
     

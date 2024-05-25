@@ -66,8 +66,16 @@ main {
     transition: color 0.2s;
 }
 
-.menu ul li:hover {
+.menu ul li:hover, .menu ul li.active {
     color: #ff5722;
+}
+
+#blog-button:hover {
+    text-decoration: line-through;
+}
+
+a {
+    color:yellowgreen
 }
 
 .menu-separator {
@@ -101,7 +109,57 @@ main {
     display: block;
 }
 
- /* Projects Menu */
+.content.message {
+    display: inline-block;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#intro {
+    flex: 1;
+    padding: 10px;
+}
+
+#picture {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+#profile-picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-banner {
+    background-color: #444;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.project-banner h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
 .project-item {
     border: 1px solid #444;
     padding: 10px;
@@ -109,6 +167,10 @@ main {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+}
+
+.project-item:hover {
+    transform: scale(1.01);
 }
 
 .project-item .thumbnail {
@@ -137,8 +199,9 @@ main {
 }
 
 .project-item .gallery img {
-    width: 50px;
-    height: 50px;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
     margin-right: 5px;
 }
 
@@ -154,4 +217,8 @@ main {
 .pagination button:disabled {
     background-color: #888;
     cursor: not-allowed;
+}
+
+small {
+    font-size: 9px;
 }
