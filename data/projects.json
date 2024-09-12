@@ -1,5 +1,12 @@
 [
     {
+        "title": "ModelStack",
+        "thumbnail": "",
+        "description": "(In-Progress) A backend application for building, training, and evaluating PyTorch neural networks. Built in Python with FastAPI and PostgreSQL.",
+        "link": "",
+        "gallery": []
+    },
+    {
         "title": "Surface Tension Simulation Research",
         "thumbnail": "assets/project_images/surface_research/surf_thumbnail.png",
         "description": "(In-Progress) Academic research on surface tension simulations with Dr. Berkin Dortdivanlioglu at UT Austin. Built custom simulation software in Julia, with geometry preprocessing with GMSH and visualization postprocessing in Paraview. This work was done as part of my paid research position in the lab.",
