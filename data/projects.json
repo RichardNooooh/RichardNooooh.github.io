@@ -1,8 +1,8 @@
 [
     {
         "title": "ModelStack",
-        "thumbnail": "",
-        "description": "(In-Progress) A backend application for building, training, and evaluating PyTorch neural networks. Built in Python with FastAPI and PostgreSQL. \nNote (Sept 12): Will fix the Docker container/images by the weekend.",
+        "thumbnail": "assets/project_images/modelstack/SystemDiagram.drawio.png",
+        "description": "(In-Progress) A backend application for building, training, and evaluating PyTorch neural networks. Built in Python with FastAPI and PostgreSQL, containerized with Docker",
         "link": "https://github.com/RichardNooooh/ModelStack",
         "gallery": []
     },
