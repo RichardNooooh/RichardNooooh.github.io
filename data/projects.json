@@ -18,7 +18,7 @@
     {
         "title": "Tetris AI",
         "thumbnail": "assets/project_images/tetris_ai/gui.png",
-        "description": "(In-Progress) Reinforcement learning agents in a custom Tetris environment implemented in Python. One of the agents include a Deep Q-Learning agent implemented with PyTorch.",
+        "description": "Reinforcement learning agents in a custom Tetris environment implemented in Python. One of the agents include a Deep Q-Learning agent implemented with PyTorch.",
         "link": "https://github.com/RichardNooooh/TetrisRL",
         "gallery": []
     },
