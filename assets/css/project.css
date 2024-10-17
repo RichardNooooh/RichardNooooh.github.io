@@ -32,15 +32,17 @@
 
 /* Thumbnail behavior */
 .thumbnail {
+    text-align: center;
     width: 200px;
+    height: 80%;
     /* height: 100px; */
     overflow: hidden;
     flex-shrink: 0; /* Prevent shrinking */
 }
 
 .thumbnail img {
-    width: 100%;
-    /* height: 100%; */
+    width: 80%;
+    height: 80%;
     object-fit: cover;
     transition: width 0.3s ease, height 0.3s ease;
 }

@@ -12,13 +12,13 @@ Below is a collection of some the work I have done.
     {% for project-item in site.data.projects %}
         <div class="project-item">
             <div class="thumbnail">
-                <img src="{{ site.baseurl }}/{{ project-item.thumbnail }}" alt="Project Thumbnail">
+                <img src="{{ project-item.thumbnail | relative_url }}" alt="Project Thumbnail">
             </div>
             <div class="project-info">
                 <h2>{{ project-item.title }}</h2>
                 <p>{{ project-item.description }}</p>
                 {% if project-item.link != "" %}
-                    <a href="{{ project.link }}" target="_blank">View Project</a>
+                    <a href="{{ project-item.link | absolute_url }}" target="_blank">View Project</a>
                 {% endif %}
             </div>
             {% if project-item.gallery.size > 0 %}
