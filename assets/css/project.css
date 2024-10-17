@@ -1,0 +1,100 @@
+/* Container for the projects list */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Project item hover effect */
+.project-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    transition: all 0.3s ease; /* Smooth transition for expanding/collapsing */
+    cursor: pointer;
+    /* Adding slight shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+    /* Slightly expand the project item on hover */
+.project-item:hover {
+    transform: scale(1.02); /* Slight expansion */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
+    border-color: #999; /* Optional: Change border color on hover */
+}
+
+
+.project-item.expanded {
+    flex-direction: column; /* Switch to column layout when expanded */
+}
+
+/* Thumbnail behavior */
+.thumbnail {
+    width: 200px;
+    /* height: 100px; */
+    overflow: hidden;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.thumbnail img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.project-item.expanded .thumbnail {
+    width: 100%; /* Still 100% width, but no larger than the original image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+}
+
+/* Prevent the thumbnail from stretching beyond the original image size */
+.thumbnail img {
+    max-width: 100%; /* Prevent from growing larger than the container */
+    /* max-height: 200px; Optional max height to constrain image size */
+}
+
+/* Project info styling */
+.project-info {
+    flex: 1;
+    margin-left: 20px; /* Margin between thumbnail and text */
+}
+
+.project-item.expanded .project-info {
+    margin-left: 0;
+    text-align: center;
+}
+
+/* Gallery */
+.project-gallery {
+    margin-top: 20px;
+    transition: max-height 0.3s ease; /* Smooth transition for showing/hiding */
+}
+
+.project-gallery ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow images to wrap onto new lines if necessary */
+}
+
+.project-gallery ul li img {
+    width: 200px;
+    /* height: 200px; */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-item.expanded .project-gallery h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Utility class to hide the gallery initially */
+.hidden {
+    display: none;
+}
