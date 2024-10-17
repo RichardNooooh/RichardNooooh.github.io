@@ -2,7 +2,7 @@
 permalink: /projects/
 title: "Projects"
 last_modified_at: 2024-10-17
-classes: wide
+# classes: wide
 # toc: true
 ---
 
