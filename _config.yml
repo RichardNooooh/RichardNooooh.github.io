@@ -1,7 +1,7 @@
 title: Richard Noh | Portfolio
 email: richard.jun.noh@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Second-Year CSEM Master's Student at UT Austin
+  recent grad coder 
 github_username: RichardNooooh
 minimal_mistakes_skin: dark
 domain: richardnooooh.github.io
@@ -35,7 +35,7 @@ plugins:
 
 author:
   name   : "Richard Noh"
-  avatar : "https://media.licdn.com/dms/image/v2/D5635AQE1HPTUwJ5G-w/profile-framedphoto-shrink_400_400/B56ZYC.Zp_HQAg-/0/1743806635031?e=1745024400&v=beta&t=2kjhOwWgIZ-pPN_dKHmS72hJEM6ut5AofV0J07Nla-c"
+  avatar : "assets/profile_picture.jpg"
   bio    : "Perpetually tired.. but still chugging on"
   links:
     - label: "GitHub"
@@ -44,8 +44,6 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/rnoh/"
-    - label: "Simulation Research Lab"
-      url: "https://sites.utexas.edu/berkin/"
     - label: "Email"
       icon: "fa fa-envelope fa-fw"
       url: "mailto:richard.jun.noh@gmail.com"
