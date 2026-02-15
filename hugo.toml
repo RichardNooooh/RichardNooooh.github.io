@@ -5,6 +5,8 @@ languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
 summaryLength = 70
+capitalizeListTitles = false
+titleCaseStyle = "none"
 
 [pagination]
 pagerSize = 6
@@ -140,7 +142,7 @@ customRemoteJS = []
 category = "categories"
 series = "series"
 tag = "tags"
-author = "authors"
+# author = "authors"
 
 [[params.social]]
 name = "Github"
