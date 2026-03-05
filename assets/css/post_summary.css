@@ -1,0 +1,213 @@
+/* --- Coder-style "card" post list items (previews) ----------------------- */
+/* Uses Coder’s palette + list rhythm, but makes meta (date/read/cat/tag) one row. */
+
+/* Coder sets list items to display:flex on desktop for .list ul:not(.pagination) li.
+   Our cards are <article.post-item> inside those <li>, so normalize the wrapper. */
+.list ul:not(.pagination) > li {
+  display: block;
+}
+.list ul:not(.pagination) > li > .post-item {
+  width: 100%;
+}
+
+/* Theme-aligned tokens */
+:root {
+  --post-card-radius: 1rem;
+  --post-card-pad-y: 1.6rem;
+  --post-card-pad-x: 2rem;
+  --post-meta-size: 1.4rem;
+}
+
+/* Light scheme (Coder defaults) */
+body.colorscheme-light {
+  --post-card-bg: #e0e0e0;              /* $alt-bg-color */
+  --post-card-border: #ccc;             /* $darker-alt-bg-color */
+  --post-card-divider: rgba(0, 0, 0, 0.10);
+  --post-card-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.06);
+  --post-card-hover: #1565c0;           /* $link-color */
+
+  --post-pill-bg: #fafafa;              /* $bg-color */
+  --post-pill-border: rgba(0, 0, 0, 0.10);
+  --post-pill-fg: #212121;              /* $fg-color */
+}
+
+/* Dark scheme (Coder defaults) */
+body.colorscheme-dark {
+  --post-card-bg: #424242;              /* $alt-bg-color-dark */
+  --post-card-border: #4f4f4f;          /* $lighter-alt-bg-color-dark */
+  --post-card-divider: rgba(255, 255, 255, 0.14);
+  --post-card-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.35);
+  --post-card-hover: #42a5f5;           /* $link-color-dark */
+
+  --post-pill-bg: #212121;              /* $bg-color-dark */
+  --post-pill-border: rgba(255, 255, 255, 0.14);
+  --post-pill-fg: #dadada;              /* $fg-color-dark */
+}
+
+/* Base card */
+.post-item {
+  display: block;
+  margin: 1.6rem 0;
+  padding: var(--post-card-pad-y) var(--post-card-pad-x);
+  border-radius: var(--post-card-radius);
+  background: var(--post-card-bg);
+  border: 1px solid var(--post-card-border);
+  box-shadow: var(--post-card-shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-item:hover,
+.post-item:focus-within {
+  transform: translateY(-2px);
+  border-color: var(--post-card-hover);
+}
+
+/* Header spacing */
+.post-item header {
+  margin: 0;
+}
+
+/* Title: your list uses h1.title; make it “list-sized” */
+.post-item .post-title {
+  margin: 0;
+}
+.post-item h1.title {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 3.0rem;
+  font-weight: 700;
+}
+.post-item a.title-link {
+  color: inherit;
+  text-decoration: none;
+}
+.post-item a.title-link:hover,
+.post-item a.title-link:focus {
+  color: var(--post-card-hover);
+  text-decoration: underline;
+}
+
+/* --- META ROW (date + reading time + categories + tags on one line) ------ */
+.post-item .post-meta {
+  margin-top: 0.6rem;
+  font-size: var(--post-meta-size);
+  line-height: 1.9rem;
+  opacity: 0.9;
+
+  /* Key change: make the entire meta block one flexible row */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem 1.4rem;
+}
+
+/* Nuke default block margins inside meta (partials sometimes use <p>, <ul>, etc.) */
+.post-item .post-meta :is(p, ul, ol) {
+  margin: 0;
+  padding: 0;
+}
+.post-item .post-meta :is(ul, ol) {
+  list-style: none;
+}
+
+/* Date + reading time cluster */
+.post-item .post-meta .date {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem 1.4rem;
+  margin: 0;
+}
+
+/* Keep these from breaking awkwardly */
+.post-item .post-meta .posted-on,
+.post-item .post-meta .reading-time {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Categories/tags containers: force horizontal layout even if partial emits blocks */
+.post-item .post-meta :is(.categories, .tags) {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+  margin: 0;
+}
+
+/* If partial wraps each item in .tag/.category spans, keep them inline */
+.post-item .post-meta :is(.tags, .categories) :is(.tag, .category) {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* FontAwesome icon rhythm (matches theme) */
+.post-item .post-meta i {
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* Pill styling for taxonomy links inside meta */
+.post-item .post-meta .tags a {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.6rem;
+  background: var(--post-pill-bg);
+  border: 1px solid var(--post-pill-border);
+  color: var(--post-pill-fg);
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+
+.post-item .post-meta :is(.categories, .tags) a:hover,
+.post-item .post-meta :is(.categories, .tags) a:focus {
+  border-color: var(--post-card-hover);
+  text-decoration: underline;
+}
+
+/* Divider between header/meta and summary */
+.post-item header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: var(--post-card-divider);
+  margin-top: 1.2rem;
+}
+
+/* Summary */
+.post-item .summary {
+  margin-top: 1.2rem;
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+  opacity: 0.95;
+}
+.post-item .summary p {
+  margin: 0.8rem 0;
+}
+
+/* “Read more…” link */
+.post-item .summary a {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Mobile tweaks */
+@media only screen and (max-width: 768px) {
+  .post-item {
+    padding: 1.4rem 1.4rem;
+  }
+
+  .post-item h1.title {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+
+  .post-item .summary {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
