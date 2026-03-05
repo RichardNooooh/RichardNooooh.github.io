@@ -11,6 +11,10 @@ titleCaseStyle = "none"
 [pagination]
 pagerSize = 6
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [services]
 [services.disqus]
 # Enable Disqus comments
