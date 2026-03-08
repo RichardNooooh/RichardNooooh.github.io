@@ -1,1 +1,20 @@
-{"m.homeserver": {"base_url": "https://matrix.answerisnoh.dev"}}
+{
+  "cc.etke.synapse-admin": {
+    "asManagedUsers": [
+      "^@bot\\.matrix\\-registration\\-bot:answerisnoh\\.dev$"
+    ],
+    "corsCredentials": "same-origin",
+    "externalAuthProvider": false,
+    "menu": [],
+    "restrictBaseUrl": "https://matrix.answerisnoh.dev"
+  },
+  "m.homeserver": {
+    "base_url": "https://matrix.answerisnoh.dev"
+  },
+  "org.matrix.msc4143.rtc_foci": [
+    {
+      "livekit_service_url": "https://matrix.answerisnoh.dev/livekit-jwt-service",
+      "type": "livekit"
+    }
+  ]
+}
